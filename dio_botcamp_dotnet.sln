@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dio_botcamp_dotnet", "dio_botcamp_dotnet\dio_botcamp_dotnet.csproj", "{094D7746-5C06-477C-9916-DCD418C01186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dio_botcamp_dotnet.Common", "dio_botcamp_dotnet.Common\dio_botcamp_dotnet.Common.csproj", "{484A2596-E394-4B8E-B4D6-1A6550F1E5A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{094D7746-5C06-477C-9916-DCD418C01186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094D7746-5C06-477C-9916-DCD418C01186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094D7746-5C06-477C-9916-DCD418C01186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094D7746-5C06-477C-9916-DCD418C01186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484A2596-E394-4B8E-B4D6-1A6550F1E5A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484A2596-E394-4B8E-B4D6-1A6550F1E5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484A2596-E394-4B8E-B4D6-1A6550F1E5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484A2596-E394-4B8E-B4D6-1A6550F1E5A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

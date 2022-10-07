@@ -245,9 +245,18 @@ do
 
 Console.WriteLine($"O total da soma dos números digitados é de: {soma}");
 
+-Conhecendo a organização de um programa em C#-
 Estrutura de um programa e método principal
 
 - .csproj: Contém informações referente a um projeto
 (build, debug, versão)
 
 - .sln: contém informações que carregam um agrupamento de projetos.
+
+-criar uma nova solução via cmd:
+dotnet new sln
+
+Diferença entre projeto .net5 e .net6:
+- No 5 o arquivo program.cs é iniciado com um método main
+todo o código é escrito dentro dele, no .net6 não tem isso,
+mas pode ser utiizado sem nenhum problema.
