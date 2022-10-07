@@ -1,0 +1,260 @@
+obs: Subir alterações do projeo para o github.
+git add .
+git commit -m "nome do projeto"
+git pull origin main
+git push origin main.
+
+para se iniciar um novo programa:
+no terminal digitar dotnet new console.
+
+vai gerar umas pastas e uns arquivos:
+
+-bin (Binários)
+-obj (Pasta referente a arquivos de debug)
+-um arquivo com o mesmo nome da pasta.csproj (Arquivo de projeto do C#, são metadados)
+-Program.cs (Onde será desenvolvido o seu programa)
+
+Classes: 
+
+- Está relacionado com a abstração;
+- è pegar um objeto do mundo real e implementar na programação;
+- Todo nome de classe tem que iniciar com a letra maiúscula.
+- E se a palavra for composta a segunda palavra tem que ser maiúscula também.
+ex: PessoaFisica
+
+Tipos de dados:
+
+- string (caracteres, letras e números, textos em geral)
+- char (caractere unicode)
+- boleano (Verdadeiro ou falso)
+- int (Número inteiro)
+- float (Número com ponto flutuante)
+- double (Número com ponto flutuante, mais preciso que o float/ para representar duas casas decimais é necessário escrever To.String("0.00"))
+- decimal (Número com ponto flutuante direcionado para valores monetários)
+
+Obs:
+Console.WriteLine(""); // Imprimir na tela.
+Console.ReadLine(); // Ler dados que o usuário vai inserir.
+Obs:
+Comentar um bloco de código
+ ctrl +K+c
+ 
+ Biblioteca DateTime:
+ - Representar a data e a hora atual:
+ DateTime dataAtual = DateTime.Now
+
+Operadores de Atribuição:
+
+- É representado por =
+- Serve para atribuir um valor para uma determinada variável.
+ex:
+int a = 10;
+int b = 20;
+int c = a + b;
+Console.WriteLine(c);
+
+Combinando operadores:
+- c = c + 5; // Pode ser usado também c += 5
+
+Obs: Quando usa a variável e não declara o tipo significa que está usando uma variável já existente.
+
+Convertendo tipos de variáveis(cast - casting):
+-ex
+int a = Convert.ToInt32("5"); // ou int a = int.Parse("5");
+
+Console.WriteLine(a);
+
+Operadores condicionais:
+
+- Possibilita mudar o fluxo de execução de seu 
+código, indicando um caminho que ele deve percorrer.
+Ex:
+int quantidadeEmEstoque = 10;
+int quantidadeCompra = 4;
+
+if (quantidadeEmEstoque >= quantidadeCompra)
+{
+    Console.WriteLine("Venda realizada.");
+}
+else
+{
+    Console.WriteLine("Desculpe, não temos a quantidade desejada.");
+}
+- Na condição if se você passar uma variável bool ele também aceita.
+ex:
+int quantidadeEmEstoque = 10;
+int quantidadeCompra = 4;
+bool possivelVenda = quantidadeEmEstoque >= quantidadeCompra;
+
+Console.WriteLine($"Quantidade em estoque: {quantidadeEmEstoque}");
+Console.WriteLine($"Qunatidade comprada: {quantidadeCompra}");
+Console.WriteLine($"É possível realizar a venda? {possivelVenda}");
+
+
+if (possivelVenda)
+{
+    Console.WriteLine("Venda realizada.");
+}
+else
+{
+    Console.WriteLine("Desculpe, não temos a quantidade desejada.");
+}
+
+- if aninhado:
+int quantidadeEmEstoque = 3;
+int quantidadeCompra = 0;
+bool possivelVenda = quantidadeCompra > 0 && quantidadeEmEstoque >= quantidadeCompra;
+
+Console.WriteLine($"Quantidade em estoque: {quantidadeEmEstoque}");
+Console.WriteLine($"Qunatidade comprada: {quantidadeCompra}");
+Console.WriteLine($"É possível realizar a venda? {possivelVenda}");
+
+if(quantidadeCompra == 0)
+{
+    Console.WriteLine("Venda invalida");
+}
+else if (possivelVenda)
+{
+    Console.WriteLine("Venda realizada.");
+}
+else
+{
+    Console.WriteLine("Desculpe, não temos a quantidade desejada.");
+}
+
+- switch case (Alternativa ao if aninhado)
+ex:
+Console.WriteLine("Digite uma letra:");
+string letra = Console.ReadLine();
+
+switch(letra)
+{
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        Console.WriteLine("A letra digitada é uma vogal."):
+        break;
+    
+    default:
+        Console.Write("A letra digitada não é uma vogal.");
+        break;
+}
+
+Introdução a operador lógico:
+
+- Operador OR (Pipe, ||)
+bool ehMaiorDeIdade = true;
+bool possuiAutorizacaoDoResponsavel = false;
+
+if(ehMaiorDeIdade || possuiAutorizacaoDoResponsavel);
+{
+    Console.WriteLine("Entrada liberada.");
+}
+else
+{
+    Console.WriteLine("Entrada não liberada.");
+}
+
+- Operador AND (&&)
+bool possuiPresencaMinima = true;
+double media = 7.5;
+
+if(possuiPresencaMinima && media >= 7)
+{
+    Console.WriteLine("Aluno aprovado.");
+}
+else
+{
+    Console.WriteLine("Aluno reprovado");
+}
+
+- Operador NOT (!)
+ex:
+bool choveu = true;
+bool estaTarde = true;
+
+if (!choveu && !estaTarde)
+{
+    Console.WriteLine("Vou pedalar!");
+}
+else{
+    Console.Write("Vou pedalar outro dia!");
+}
+
+Operadores Aritméticos e a classe Math:
+
+ + Adição
+ - Subtração
+ * Multiplicação
+ / Divisão
+ % modulos
+ ++ Increment (Incrementa 1)
+ -- Decrement (Decrementa 1)
+ 
+ Estrutura de repetição:
+ - for
+ ex:
+ int numero = 5;
+
+for(int contador = 0; contador <= 10; contador++)
+{
+    Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+}
+
+- while
+int numero = 5;
+int contador = 0;
+
+while(contador <= 10)
+{
+    Console.WriteLine($"{contador + 1}° execução: {numero} x {contador} = {numero * contador}");
+    contador++;
+}
+
+Obs:
+Para interromper o laço tem que adicionar um break.
+ex:
+int numero = 5;
+int contador = 0;
+
+while(contador <= 10)
+{
+    Console.WriteLine($"{contador + 1}° execução: {numero} x {contador} = {numero * contador}");
+    contador++;
+
+    if(contador == 6)
+    {
+        break;
+    }
+}
+
+do while (É execultado independente da condição)
+
+int soma = 0, numero = 0;
+
+do
+{
+    Console.WriteLine("Digite um número: (0 para parar.) ");
+    numero = Convert.ToInt32(Console.ReadLine());
+
+    soma += numero;
+
+} while(numero != 0);
+
+Console.WriteLine($"O total da soma dos números digitados é de: {soma}");
+
+Estrutura de um programa e método principal
+
+- .csproj: Contém informações referente a um projeto
+(build, debug, versão)
+
+- .sln: contém informações que carregam um agrupamento de projetos.
+
+-Criando uma nova Solution:
+$ dotnet new sln -n "dio_botcamp_dotnet"
+
+- Adicionando um projeto existente a solution:
+$ dotnet sln "c:\dio_botcamp_dotnet\dio_botcamp_dotnet.sln" add "c:\dio_botcamp_dotnet\dio_botcamp_dotnet.csproj"
+O projeto 'dio_botcamp_dotnet.csproj' foi adicionado à solução.

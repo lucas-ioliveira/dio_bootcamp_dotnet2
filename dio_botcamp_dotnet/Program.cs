@@ -1,4 +1,4 @@
-using dio_botcamp_dotnet.Models;
+using dio_botcamp_dotnet.Common.Models;
 // -----------------------------------------------------------
 // Teste
 Pessoa pessoa1 = new Pessoa();
